@@ -19,12 +19,13 @@ public:
 	CTable();
 	CTable(string sName, int iTableLen);
 	CTable(const CTable &pcOther);
+	CTable(const CTable &pcOther, int iExtend);
 	~CTable();
 
 	void vSetName(string sName);
 	string changeTabLength(int iNewS);
 	string iSetElement(int iPos, int iElement);
-	string iGetElement(int iPos);
+	string iGetElement(int iPos, int &piValue);
 	string sGetInfo();
 	int iGetTabSize() { return i_tab_size; };
 
